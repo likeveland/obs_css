@@ -1,0 +1,171 @@
+@font-face {
+  font-family: 'Ownglyph_ryuttung-Rg';
+  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2405-2@1.0/Ownglyph_ryuttung-Rg.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@keyframes wiggle {
+  0%, 100% { transform: rotate(0deg); }
+  25% { transform: rotate(5deg); }
+  75% { transform: rotate(-5deg); }
+}
+
+@keyframes popBounce {
+  0%   { transform: scale(0.8) translateY(20px); opacity: 0; }
+  60%  { transform: scale(1.1) translateY(-4px); opacity: 1; }
+  80%  { transform: scale(0.95) translateY(2px); }
+  100% { transform: scale(1) translateY(0); }
+}
+
+[class*='live_overlay_chatting'] {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: flex-start;
+  gap: 16px !important;
+}
+
+div[class*='live_overlay_item'] {
+  position: relative;
+  overflow: visible !important;
+  font-family: 'Ownglyph_ryuttung-Rg', sans-serif !important;
+  animation: popBounce 0.6s ease-out;
+}
+
+div[class*='live_overlay_message'] {
+  mix-blend-mode: normal !important;
+  background-image: linear-gradient(0deg, rgba(0,0,0,0.05) 1px, transparent 1px),
+  linear-gradient(90deg, rgba(0,0,0,0.05) 1px, transparent 1px),
+  linear-gradient(#FFE8E1, #FFE8E1);
+  background-size: 12px 12px, 12px 12px, auto;
+  background-repeat: repeat;
+  border-radius: 60px !important;
+  padding: 0px 0px !important;
+  margin: 3px 3px 10px 10px !important;
+  display: block !important;
+  width: auto !important;
+  max-width: 85% !important;
+  word-break: break-word !important;
+  white-space: normal !important;
+  outline: 2px solid #ffffff !important;
+  z-index: 1;
+}
+
+div[class*='live_overlay_message']:nth-child(3n+1) {
+  background-image: linear-gradient(0deg, rgb(85, 85, 85, 0.1) 1px, transparent 1px),
+  linear-gradient(90deg, rgb(85, 85, 85, 0.1) 1px, transparent 1px),
+  linear-gradient(#EFAAC4, #EFAAC4);
+  background-size: 12px 12px, 12px 12px, auto;
+  background-repeat: repeat;
+  box-shadow: 0 0 6px #EFAAC4, 0 0 12px #EFAAC4 !important;
+  opacity: 1 !important;
+  outline: 2px solid #ffffff !important;
+}
+div[class*='live_overlay_message']:nth-child(3n+2) {
+  background-image: linear-gradient(0deg, rgb(85, 85, 85, 0.1) 1px, transparent 1px),
+  linear-gradient(90deg, rgb(85, 85, 85, 0.1) 1px, transparent 1px),
+  linear-gradient(#FFC4D1, #FFC4D1);
+  background-size: 12px 12px, 12px 12px, auto;
+  background-repeat: repeat;
+  box-shadow: 0 0 6px #FFC4D1, 0 0 12px #FFC4D1 !important;
+  opacity: 1 !important;
+  outline: 2px solid #ffffff !important;
+}
+div[class*='live_overlay_message']:nth-child(3n) {
+  background-image: linear-gradient(0deg, rgb(85, 85, 85, 0.1) 1px, transparent 1px),
+  linear-gradient(90deg, rgb(85, 85, 85, 0.1) 1px, transparent 1px),
+  linear-gradient(#FFE8E1, #FFE8E1);
+  background-size: 12px 12px, 12px 12px, auto;
+  background-repeat: repeat;
+  box-shadow: 0 0 6px #FFE8E1, 0 0 12px #FFE8E1 !important;
+  opacity: 1 !important;
+  outline: 2px solid #ffffff !important;
+}
+
+span[class*='live_chatting_message_text'] {
+  position: relative;
+  top: -15px !important;
+  color: #323949 !important;
+  font-size: 20px !important;
+  line-height: 1.4 !important;
+  word-break: break-word !important;
+  display: block !important;
+  text-align: center !important;
+  white-space: pre-wrap !important;
+  font-family: 'Ownglyph_ryuttung-Rg', sans-serif !important;
+}
+
+div[class*='live_chatting_message_wrapper'] {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  gap: 6px !important;
+  width: auto !important;
+  overflow: visible !important;
+}
+
+span[class*='live_chatting_username_container'] {
+  position: relative !important;
+  top: -25px;
+  margin-bottom: -8px;
+  background: linear-gradient(to right, #D4DCCD, #ffccf1) !important;
+  border-radius: 16px !important;
+  padding: 2px 8px !important;
+  color: #ffffff !important;
+  font-size: 15px !important;
+  font-weight: bold !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 3px !important;
+  box-shadow: 0 0 6px rgba(255, 204, 241);
+  width: fit-content !important;
+  font-family: 'Ownglyph_ryuttung-Rg', sans-serif !important;
+  transform: translateY(1px) translateX(-3px);
+  outline: 2px solid #ffffff;
+}
+
+span[class*='live_chatting_username_nickname'] {
+  color: #323949 !important;
+  transform: translateX(-3px);
+  font-family: 'Ownglyph_ryuttung-Rg', sans-serif !important;
+}
+
+span[class*='badge_container'] {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  margin-left: 2px !important;
+}
+span[class*='badge_container'] > img,
+span[class*='badge_container'] > svg {
+  height: 1.2em !important;
+  width: auto !important;
+  vertical-align: middle !important;
+}
+
+div[class*='live_overlay_message']::before {
+  content: '';
+  position: absolute;
+  top: 48px;
+  left: -10px;
+  width: 40px;
+  height: 40px;
+  background-image: url('https://i.imgur.com/zdPJttl.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  animation: wiggle 0.6s ease-in-out 2;
+}
+
+
+div[class*='live_overlay_message']::after {
+  content: '';
+  position: absolute;
+  top: -3px;
+  right: -15px;
+  width: 40px;
+  height: 40px;
+  background-image: url('https://i.imgur.com/zdPJttl.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  animation: wiggle 0.6s ease-in-out 2;
+}
